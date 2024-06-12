@@ -14,7 +14,7 @@ public class SpringSecurityConfig {
 //    @Order(2147483642)
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((requests) -> {
-            ((AuthorizeHttpRequestsConfigurer.AuthorizedUrl)requests.requestMatchers("/home","/css/**","/images/**")).permitAll();
+            ((AuthorizeHttpRequestsConfigurer.AuthorizedUrl)requests.requestMatchers("/index.html","/css/**","/images/**")).permitAll();
         });
         http.authorizeHttpRequests((requests) -> {
             ((AuthorizeHttpRequestsConfigurer.AuthorizedUrl)requests.anyRequest()).authenticated();
